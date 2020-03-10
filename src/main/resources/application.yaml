@@ -1,2 +1,24 @@
 server:
   port: 9998
+
+
+#redis配置
+spring:
+  redis:
+    #数据库索引（默认为0）
+    database: 0
+    #服务器地址
+    host: localhost
+    #端口
+    port: 6379
+    #密码（默认为空）
+    password:
+    timeout: 10000
+    #最大连接数
+    jedis:
+      pool:
+        max-active: 500
+        max-wait: 1000
+        max-idle: 100
+        min-idle: 0
+        time-between-eviction-runs: 30000

@@ -1,2 +1,2 @@
 # qiuhuu.utils
-utils project
+Java various tool projects

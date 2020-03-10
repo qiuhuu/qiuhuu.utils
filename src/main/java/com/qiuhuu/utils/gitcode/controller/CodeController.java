@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  */
 @Slf4j
 @RestController
-public class LoginController {
+public class CodeController {
 
     /**
      * 获取验证码（Gif版本）

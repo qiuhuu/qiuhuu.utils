@@ -3,7 +3,7 @@ package com.qiuhuu.utils.qrcode;
 import com.qiuhuu.utils.qrcode.utils.QRCodeUtils;
 
 /**
- * @Description:
+ * @Description: 二维码生成
  * @Author: qiuhuu
  * @Create: 2020-03-03 10:52
  */

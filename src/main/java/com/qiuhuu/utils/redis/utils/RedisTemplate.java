@@ -4,7 +4,7 @@ import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.jedis.JedisConnection;
 
 /**
- * @Auther: qiuhuu
+ * @Author: qiuhuu
  * @Description: 重写RedisTemplate,加入选库
  */
 public class RedisTemplate extends org.springframework.data.redis.core.RedisTemplate {

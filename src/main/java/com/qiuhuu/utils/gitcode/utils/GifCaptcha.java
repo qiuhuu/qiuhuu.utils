@@ -2,7 +2,7 @@ package com.qiuhuu.utils.gitcode.utils;
 
 /**
  * @Description:
- * @Author: QiuFengYe
+ * @Author: qiuhuu
  * @Create: 2020-03-10 11:50
  */
 

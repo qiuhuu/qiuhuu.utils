@@ -4,7 +4,6 @@ import java.util.Random;
 
 /**
  * @Description:
- * @Author: qiuhuu
  * @Create: 2020-03-10 14:14
  */
 public class Randoms {

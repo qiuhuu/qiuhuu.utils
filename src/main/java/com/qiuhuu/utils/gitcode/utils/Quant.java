@@ -2,7 +2,6 @@ package com.qiuhuu.utils.gitcode.utils;
 
 /**
  * @Description:
- * @Author: qiuhuu
  * @Create: 2020-03-10 11:54
  */
 public class Quant {

@@ -1,4 +1,4 @@
-package com.qiuhuu.utils.gitcode.utils;
+package com.qiuhuu.utils.code.gif.utils;
 
 import java.io.IOException;
 import java.io.OutputStream;

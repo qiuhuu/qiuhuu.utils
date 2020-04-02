@@ -28,5 +28,6 @@ Java various tool projects
     <version>3.4.0</version>
 </dependency>
 ```
-#### 动态验证码      [点击直达](https://github.com/qiuhuu/qiuhuu.utils/tree/master/src/main/java/com/qiuhuu/utils/gitcode)
+#### 动态验证码      [点击直达](https://github.com/qiuhuu/qiuhuu.utils/tree/master/src/main/java/com/qiuhuu/utils/code)
+#### 图片验证码      [点击直达](https://github.com/qiuhuu/qiuhuu.utils/tree/master/src/main/java/com/qiuhuu/utils/code)
 #### RSA加密          [点击直达](https://github.com/qiuhuu/qiuhuu.utils/tree/master/src/main/java/com/qiuhuu/utils/encrypt/rsa)

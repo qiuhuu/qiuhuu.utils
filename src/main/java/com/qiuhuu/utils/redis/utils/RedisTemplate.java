@@ -1,5 +1,7 @@
 package com.qiuhuu.utils.redis.utils;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.jedis.JedisConnection;
 
@@ -9,8 +11,13 @@ import org.springframework.data.redis.connection.jedis.JedisConnection;
  */
 public class RedisTemplate extends org.springframework.data.redis.core.RedisTemplate {
 
-    public static ThreadLocal<Integer> indexdb = new ThreadLocal<Integer>(){
-        @Override protected Integer initialValue() { return 0; }
+    @Autowired
+    private RedisProperties redisProperties;
+
+    public ThreadLocal<Integer> indexdb = new ThreadLocal<Integer>(){
+        @Override protected Integer initialValue() {
+            return redisProperties.getDatabase();
+        }
     };
 
     @Override

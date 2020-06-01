@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.data.redis.support.atomic.RedisAtomicLong;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -153,6 +154,17 @@ public class RedisUtils {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public void set(String key,Long value,long timeout) {
+        RedisAtomicLong counter = new RedisAtomicLong(key, redisTemplate.getConnectionFactory());
+        counter.set(value);
+        counter.expire(timeout, TimeUnit.SECONDS);
+    }
+
+    public long longIncr(String key,long delta){
+        RedisAtomicLong counter = new RedisAtomicLong(key, redisTemplate.getConnectionFactory());
+        return counter.addAndGet(delta);
     }
 
     /**

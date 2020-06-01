@@ -1,6 +1,5 @@
 package com.qiuhuu.utils.redis.controller;
 
-import com.qiuhuu.utils.redis.utils.RedisConstants;
 import com.qiuhuu.utils.redis.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -20,9 +19,10 @@ public class RedisController {
     private RedisUtils redisUtils;
 
     @PutMapping
-    public String setRedis(){
-        String key = "test:redis";
-        String value = "123";
-        return redisUtils.set(key, value, RedisConstants.datebase8, 200)?"成功":"失败";
+    public String setRedis(String key,String value,int indexdb){
+        // redisUtils.set(key,value,300L);
+        // long l = redisUtils.longIncr(key, 2222222222222L);
+        // return "dsa";
+        return redisUtils.set(key, value, indexdb, 200)?"成功":"失败";
     }
 }

@@ -2,7 +2,6 @@ package com.qiuhuu.utils.redis.config;
 
 import com.qiuhuu.utils.redis.utils.FastJson2JsonRedisSerializer;
 import com.qiuhuu.utils.redis.utils.RedisTemplate;
-import com.qiuhuu.utils.redis.utils.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
@@ -69,20 +68,9 @@ public class RedisConfig {
         redisTemplate.setHashKeySerializer(new StringRedisSerializer());
         redisTemplate.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
         redisTemplate.setValueSerializer(fastJson2JsonRedisSerializer());
-        // 开启事务
-        redisTemplate.setEnableTransactionSupport(true);
+        // 开启事务  注意jedis自增不支持事务操作，关闭redis事务
+        // redisTemplate.setEnableTransactionSupport(true);
         redisTemplate.setConnectionFactory(factory);
-    }
-
-    /**
-     * @Description: 注入封装RedisTemplate
-     */
-    @Bean(name = "redisUtil")
-    public RedisUtils redisUtil(RedisTemplate redisTemplate) {
-        log.info("RedisUtil注入成功！");
-        RedisUtils redisUtils = new RedisUtils();
-        redisUtils.setRedisTemplate(redisTemplate);
-        return redisUtils;
     }
 
 }
